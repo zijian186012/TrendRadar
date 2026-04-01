@@ -315,8 +315,11 @@ notification:
 
   # 推送渠道配置
   channels:
-    feishu:
-      webhook_url: ""                 # 飞书机器人 webhook URL
+        feishu:
+      enabled: true
+      app_id: "${{ secrets.FEISHU_APP_ID }}"
+      app_secret: "${{ secrets.FEISHU_APP_SECRET }}"
+      user_ids: "${{ secrets.FEISHU_USER_ID }}"
 
     dingtalk:
       webhook_url: ""                 # 钉钉机器人 webhook URL
